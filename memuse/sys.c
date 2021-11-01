@@ -77,6 +77,7 @@
 #include <linux/uaccess.h>
 #include <asm/io.h>
 #include <asm/unistd.h>
+#include <asm/pgtable.h>
 
 #include "uid16.h"
 
@@ -2670,6 +2671,8 @@ SYSCALL_DEFINE1(sysinfo, struct sysinfo __user *, info)
 // Define a custom syscall
 SYSCALL_DEFINE2(memuse, pid_t, pid, int, mem_type) {
 
+	int result = 0;
+
 	// Check if PID exists with find_task_by_PID
 	struct task_struct *p;
 	p = find_task_by_vpid(pid);
@@ -2680,11 +2683,75 @@ SYSCALL_DEFINE2(memuse, pid_t, pid, int, mem_type) {
 	} else if(! (mem_type == 1 || mem_type == 2 || mem_type == 3)) { // check mem_type
 		pr_alert("memuse: invalid memory type\n");
 		return -1;
-	} else { // success (but nothing to do in parts 1-3)
+	} else { // success! 
 		pr_alert("memuse: process with pid %d found; memory type %d\n", pid, mem_type);
+		struct vm_area_struct *vma = p->mm->mmap;
+		if(vma == NULL) {
+			pr_alert("memuse: no relevant memory associted with process\n");
+		}
+
+		// This loop encapsulates most of the actual logic required for part 4.
+		while(vma != NULL) {
+
+			// First, let's determine the type of memory this virtual memory area describes:
+			int type = 0;
+			if(vma->vm_start >= p->mm->start_brk && vma->vm_start < p->mm->brk) type = 3; // heap
+			else if(vma->vm_flags & VM_GROWSDOWN) type = 1; // call stack
+			else if(vma->vm_start >= p->mm->start_stack) type = 2; // kernel
+			// It's worth noting that there's a good amount of usage in other segments (e.g., TEXT) 
+			//    not accounted for by any of these categories. 
+
+
+			// Next, let's traverse the pages that could be in that memory to see which are loaded.
+			// This page traversal inspired by the following StackOverflow question:
+			//    https://unix.stackexchange.com/questions/649216/linux-kernel-syscall-implentation-page-table-walk
+			// (yes, it was inspired by the question, not the answer. never a good sign)
+
+			// " Each active entry in the PGD table points to a page frame containing an array of Page Middle Directory (PMD) 
+			//   entries of type pmd_t which in turn points to page frames containing Page Table Entries (PTE) of type pte_t, 
+			//   which finally points to page frames containing the actual user data. "
+			if(type == mem_type) {
+				unsigned long vpage;
+				for (vpage = vma->vm_start; vpage < vma->vm_end; vpage += PAGE_SIZE) {
+					pgd_t * pgd = pgd_offset(p->mm, vpage);
+					if(pgd_none(*pgd) || pgd_bad(*pgd)) {
+						pr_alert("memuse: bad pgd");
+						return -1;
+					}
+
+					p4d_t *p4d = p4d_offset(pgd, vpage);
+					if(p4d_none(*p4d) || p4d_bad(*p4d)) {
+						pr_alert("memuse: bad p4d");
+						return -1;
+					}
+
+					pud_t *pud = pud_offset(p4d, vpage);
+					if(pud_none(*pud) || pud_bad(*pud)) {
+						pr_alert("memuse: bad pud");
+						return -1;
+					}
+
+					pmd_t * pmd = pmd_offset(pud, vpage);
+					if(pmd_none(*pmd) || pmd_bad(*pmd)) {
+						pr_alert("memuse: bad pmd");
+						return -1;
+					}
+
+					pte_t * pte = pte_offset_map(pmd, vpage);
+					if(!pte) {
+						pr_alert("memuse: could not get page table entry");
+						return -1;
+					}
+
+					if(pte_present(*pte)) result += PAGE_SIZE;
+				}
+			}
+			vma = vma->vm_next;
+		}
+
 	}
 
-	return 1;
+	return result;
 }
 
 #ifdef CONFIG_COMPAT

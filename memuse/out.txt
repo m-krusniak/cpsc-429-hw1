@@ -1,0 +1,243 @@
+Block with size 4096:
+[  283.604301]   Grows up: No
+[  283.604303]   Grows down: No
+[  283.604304]   Readable: Yes
+[  283.604304]   Writable: No
+[  283.604305]   Executable: No
+[  283.604306]   May read: Yes
+[  283.604306]   May write: Yes
+[  283.604307]   May execute: Yes
+[  283.604308]   May share: No
+[  283.604309]   Deny write: Yes
+[  283.604309] Block with size 4096:
+[  283.604310]   Grows up: No
+[  283.604311]   Grows down: No
+[  283.604327]   Readable: Yes
+[  283.604328]   Writable: No
+[  283.604328]   Executable: Yes
+[  283.604329]   May read: Yes
+[  283.604330]   May write: Yes
+[  283.604330]   May execute: Yes
+[  283.604331]   May share: No
+[  283.604332]   Deny write: Yes
+[  283.604332] Block with size 4096:
+[  283.604333]   Grows up: No
+[  283.604334]   Grows down: No
+[  283.604335]   Readable: Yes
+[  283.604335]   Writable: No
+[  283.604345]   Executable: No
+[  283.604345]   May read: Yes
+[  283.604346]   May write: Yes
+[  283.604347]   May execute: Yes
+[  283.604347]   May share: No
+[  283.604348]   Deny write: Yes
+[  283.604349] Block with size 4096:
+[  283.604349]   Grows up: No
+[  283.604350]   Grows down: No
+[  283.604351]   Readable: Yes
+[  283.604351]   Writable: No
+[  283.604352]   Executable: No
+[  283.604353]   May read: Yes
+[  283.604353]   May write: Yes
+[  283.604354]   May execute: Yes
+[  283.604355]   May share: No
+[  283.604355]   Deny write: Yes
+[  283.604356] Block with size 4096:
+[  283.604357]   Grows up: No
+[  283.604357]   Grows down: No
+[  283.604358]   Readable: Yes
+[  283.604359]   Writable: Yes
+[  283.604359]   Executable: No
+[  283.604360]   May read: Yes
+[  283.604361]   May write: Yes
+[  283.604361]   May execute: Yes
+[  283.604362]   May share: No
+[  283.604363]   Deny write: Yes
+[  283.604363] Block with size 135168:
+[  283.604364]   Grows up: No
+[  283.604365]   Grows down: No
+[  283.604365]   Readable: Yes
+[  283.604366]   Writable: Yes
+[  283.604367]   Executable: No
+[  283.604367]   May read: Yes
+[  283.604368]   May write: Yes
+[  283.604369]   May execute: Yes
+[  283.604369]   May share: No
+[  283.604370]   Deny write: No
+[  283.604371] Block with size 151552:
+[  283.604371]   Grows up: No
+[  283.604372]   Grows down: No
+[  283.604373]   Readable: Yes
+[  283.604373]   Writable: No
+[  283.604374]   Executable: No
+[  283.604375]   May read: Yes
+[  283.604375]   May write: Yes
+[  283.604385]   May execute: Yes
+[  283.604386]   May share: No
+[  283.604387]   Deny write: No
+[  283.604387] Block with size 1540096:
+[  283.604388]   Grows up: No
+[  283.604389]   Grows down: No
+[  283.604389]   Readable: Yes
+[  283.604390]   Writable: No
+[  283.604391]   Executable: Yes
+[  283.604391]   May read: Yes
+[  283.604392]   May write: Yes
+[  283.604393]   May execute: Yes
+[  283.604393]   May share: No
+[  283.604394]   Deny write: No
+[  283.604395] Block with size 303104:
+[  283.604395]   Grows up: No
+[  283.604396]   Grows down: No
+[  283.604397]   Readable: Yes
+[  283.604397]   Writable: No
+[  283.604398]   Executable: No
+[  283.604399]   May read: Yes
+[  283.604399]   May write: Yes
+[  283.604400]   May execute: Yes
+[  283.604400]   May share: No
+[  283.604401]   Deny write: No
+[  283.604402] Block with size 4096:
+[  283.604402]   Grows up: No
+[  283.604403]   Grows down: No
+[  283.604404]   Readable: No
+[  283.604404]   Writable: No
+[  283.604405]   Executable: No
+[  283.604406]   May read: Yes
+[  283.604406]   May write: Yes
+[  283.604407]   May execute: Yes
+[  283.604408]   May share: No
+[  283.604408]   Deny write: No
+[  283.604409] Block with size 12288:
+[  283.604410]   Grows up: No
+[  283.604410]   Grows down: No
+[  283.604411]   Readable: Yes
+[  283.604411]   Writable: No
+[  283.604412]   Executable: No
+[  283.604413]   May read: Yes
+[  283.604413]   May write: Yes
+[  283.604414]   May execute: Yes
+[  283.604415]   May share: No
+[  283.604415]   Deny write: No
+[  283.604416] Block with size 12288:
+[  283.604417]   Grows up: No
+[  283.604417]   Grows down: No
+[  283.604418]   Readable: Yes
+[  283.604419]   Writable: Yes
+[  283.604419]   Executable: No
+[  283.604420]   May read: Yes
+[  283.604421]   May write: Yes
+[  283.604421]   May execute: Yes
+[  283.604422]   May share: No
+[  283.604423]   Deny write: No
+[  283.604423] Block with size 24576:
+[  283.604424]   Grows up: No
+[  283.604424]   Grows down: No
+[  283.604425]   Readable: Yes
+[  283.604426]   Writable: Yes
+[  283.604426]   Executable: No
+[  283.604427]   May read: Yes
+[  283.604428]   May write: Yes
+[  283.604428]   May execute: Yes
+[  283.604429]   May share: No
+[  283.604430]   Deny write: No
+[  283.604430] Block with size 4096:
+[  283.604431]   Grows up: No
+[  283.604432]   Grows down: No
+[  283.604432]   Readable: Yes
+[  283.604433]   Writable: No
+[  283.604434]   Executable: No
+[  283.604434]   May read: Yes
+[  283.604435]   May write: Yes
+[  283.604435]   May execute: Yes
+[  283.604436]   May share: No
+[  283.604437]   Deny write: Yes
+[  283.604437] Block with size 143360:
+[  283.604438]   Grows up: No
+[  283.604439]   Grows down: No
+[  283.604439]   Readable: Yes
+[  283.604440]   Writable: No
+[  283.604441]   Executable: Yes
+[  283.604441]   May read: Yes
+[  283.604442]   May write: Yes
+[  283.604443]   May execute: Yes
+[  283.604443]   May share: No
+[  283.604444]   Deny write: Yes
+[  283.604445] Block with size 32768:
+[  283.604445]   Grows up: No
+[  283.604446]   Grows down: No
+[  283.604447]   Readable: Yes
+[  283.604447]   Writable: No
+[  283.604448]   Executable: No
+[  283.604448]   May read: Yes
+[  283.604449]   May write: Yes
+[  283.604450]   May execute: Yes
+[  283.604450]   May share: No
+[  283.604451]   Deny write: Yes
+[  283.604452] Block with size 4096:
+[  283.604452]   Grows up: No
+[  283.604453]   Grows down: No
+[  283.604454]   Readable: Yes
+[  283.604454]   Writable: No
+[  283.604455]   Executable: No
+[  283.604456]   May read: Yes
+[  283.604456]   May write: Yes
+[  283.604457]   May execute: Yes
+[  283.604458]   May share: No
+[  283.604458]   Deny write: Yes
+[  283.604459] Block with size 4096:
+[  283.604460]   Grows up: No
+[  283.604460]   Grows down: No
+[  283.604461]   Readable: Yes
+[  283.604461]   Writable: Yes
+[  283.604462]   Executable: No
+[  283.604463]   May read: Yes
+[  283.604463]   May write: Yes
+[  283.604464]   May execute: Yes
+[  283.604465]   May share: No
+[  283.604465]   Deny write: Yes
+[  283.604466] Block with size 4096:
+[  283.604467]   Grows up: No
+[  283.604467]   Grows down: No
+[  283.604468]   Readable: Yes
+[  283.604469]   Writable: Yes
+[  283.604469]   Executable: No
+[  283.604470]   May read: Yes
+[  283.604471]   May write: Yes
+[  283.604471]   May execute: Yes
+[  283.604472]   May share: No
+[  283.604473]   Deny write: No
+[  283.604473] Block with size 135168:
+[  283.604474]   Grows up: No
+[  283.604475]   Grows down: Yes
+[  283.604475]   Readable: Yes
+[  283.604476]   Writable: Yes
+[  283.604477]   Executable: No
+[  283.604477]   May read: Yes
+[  283.604478]   May write: Yes
+[  283.604478]   May execute: Yes
+[  283.604479]   May share: No
+[  283.604480]   Deny write: No
+[  283.604481] Block with size 16384:
+[  283.604481]   Grows up: No
+[  283.604482]   Grows down: No
+[  283.604483]   Readable: Yes
+[  283.604483]   Writable: No
+[  283.604484]   Executable: No
+[  283.604485]   May read: Yes
+[  283.604485]   May write: No
+[  283.604486]   May execute: No
+[  283.604487]   May share: No
+[  283.604487]   Deny write: No
+[  283.604488] Block with size 8192:
+[  283.604488]   Grows up: No
+[  283.604489]   Grows down: No
+[  283.604490]   Readable: Yes
+[  283.604490]   Writable: No
+[  283.604491]   Executable: Yes
+[  283.604492]   May read: Yes
+[  283.604492]   May write: Yes
+[  283.604493]   May execute: Yes
+[  283.604494]   May share: No
+[  283.604494]   Deny write: No
+[  283.604495] memuse: searched 22 records total
